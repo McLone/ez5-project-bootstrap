@@ -36,22 +36,20 @@ ezpublish:
     siteaccess:
         # Available siteaccesses
         list:
-            - ezdemo_site
-            - fre
-            - ezdemo_site_admin
+            - fr
+            - is_admin
         # Siteaccess groups. Use them to group common settings.
         groups:
-            ezdemo_group: [ezdemo_site, fre, ezdemo_site_admin]
-            frontend_group: [ezdemo_site, fre]
-        default_siteaccess: ezdemo_site
+            site_group: [fr, is_admin]
+            frontend_group: [fr]
+        default_siteaccess: fr
         match:
             Map\URI:
-                ezdemo_site: ezdemo_site
-                ezdemo_site_admin: ezdemo_site_admin
-                fre: fre
+                fr: fr
+                is_admin: is_admin
             Map\Host:
-                ezpublish.dev: ezdemo_site
-                admin.ezpublish.dev: ezdemo_site_admin
+                ezpublish.dev: fr
+                admin.ezpublish.dev: is_admin
 
     imagemagick:
         enabled: true
@@ -60,16 +58,16 @@ ezpublish:
 
     # System settings, grouped by siteaccess and/or siteaccess group
     system:
-        ezdemo_group:
+        site_group:
             # The repository to use. Here "main", which is defined in "repositories" above.
             repository: main
-            languages: [eng-GB, fre-FR]
+            languages: [fre-FR]
         frontend_group:
             # Session name will be common for all siteaccesses members of this group
             # It means that session will be shared for frontend siteaccesses, but not with backoffice
             session:
                 name: MyFrontendSessionName
-        ezdemo_site:
+        fr:
             content:
                 view_cache: true
                 ttl_cache: true
@@ -94,6 +92,6 @@ ezpublish:
                     filters:
                         - {name: geometry/scalewidthdownonly, params: [300]}
                         - {name: geometry/crop, params: [200, 200, 0, 0]}
-        ezdemo_site_admin:
+        is_admin:
             # Use legacy mode to use the admin interface since everything needs to run via the legacy kernel
             legacy_mode: true

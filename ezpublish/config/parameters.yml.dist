@@ -2,9 +2,9 @@
 parameters:
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
-    locale_fallback: en
+    locale_fallback: fr
 
-    mailer_transport:  smtp
+    mailer_transport:  mail
     mailer_host:       127.0.0.1
     mailer_user:       ~
     mailer_password:   ~
@@ -13,3 +13,8 @@ parameters:
     debug_toolbar:          true
     debug_redirects:        false
     use_assetic_controller: true
+
+    db_host:        localhost
+    db_user:        root
+    db_password:
+    db_dbname:
