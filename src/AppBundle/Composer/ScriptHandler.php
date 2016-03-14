@@ -37,7 +37,7 @@ class ScriptHandler extends DistributionBundleScriptHandler
                 $envParameter =  '--env=' . escapeshellarg( $env );
             }
 
-            static::executeCommand($event, $appDir, 'ezpublish:test:init_db ' . $envParameter . ' --interactive');
+            static::executeCommand($event, $appDir, 'ezpublish:test:init_db ' . $envParameter);
         }
     }
 }

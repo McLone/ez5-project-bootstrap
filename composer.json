@@ -72,7 +72,6 @@
             "@reset-files-owner"
         ],
         "post-create-project-cmd": [
-          "@post-install-cmd",
           "AppBundle\\Composer\\ScriptHandler::initDb",
           "AppBundle\\Composer\\ScriptHandler::generateLegacyAutoload",
           "@reset-files-owner"
