@@ -1,9 +1,8 @@
 #Infostrates eZ5 Project Bootstrap
 
 ##Installation 
-```bash
+```
 php -d memory_limit composer.phar install
-php ezpublish/console ezpublish:test:init_db
 chown web:web -R ./*
 chown apache:apache -R ezpublish/cache ezpublish/logs ezpublish_legacy/var
 ```

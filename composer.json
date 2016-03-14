@@ -70,6 +70,10 @@
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::dumpAssetsHelpText",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installLegacyBundlesExtensions"
+        ],
+        "post-create-project-cmd": [
+          "@post-install-cmd",
+          "AppBundle\\Composer\\ScriptHandler::initDb"
         ]
     },
     "config": {
