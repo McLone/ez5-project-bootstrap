@@ -3,8 +3,8 @@
 ##Installation 
 ```bash
 php -d memory_limit composer.phar install
-sudo -u apache php ezpublish/console ezpublish:legacy:script bin/php/ezpgenerateautoloads.php
-sudo -u apache php ezpublish/console ezpublish:test:init_db
+php ezpublish/console ezpublish:legacy:script bin/php/ezpgenerateautoloads.php
+php ezpublish/console ezpublish:test:init_db
 chown web:web -R ./*
 chown apache:apache -R ezpublish/cache ezpublish/logs ezpublish_legacy/var
 ```
