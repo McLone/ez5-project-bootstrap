@@ -1,17 +1,20 @@
-#Infostrates eZ5 Project Bootstrap
+#Infostrates' eZ5 Project Bootstrap
+
+A simple start structure for a new eZPublish Community Project.
+Take care that this project might not fit your needs, as its scaled for our own server settings (especially the "reset-files-owner" script part of the composer.json).
 
 ##Installation 
 ```
-php -d memory_limit composer.phar install
-chown web:web -R ./*
-chown apache:apache -R ezpublish/cache ezpublish/logs ezpublish_legacy/var
+php -d memory_limit composer.phar create-project mclone/ez5-project-bootstrap [nom_du_projet]
 ```
 
+C'est prêt !
+
 L'admin est ici :
-web/is_admin
+http://[adresse_serveur_dev/[nom_du_projet]/web/is_admin
 Login admin (**à changer avant d'oublier**) :
-admin
-publish
+Login : admin
+Pass : publish
 
 N'hésitez pas à utiliser le dossier doc ;)
 

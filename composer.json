@@ -1,12 +1,12 @@
 {
-    "name": "ezsystems/ezpublish-community",
-    "description": "eZ Publish 5 community distribution",
-    "homepage": "http://share.ez.no",
+    "name": "mclone/ez5-project-bootstrap",
+    "description": "Infostrates' eZ5 Project Bootstrap (using eZ Publish 5 community distribution)",
+    "homepage": "https://github.com/mclone/ez5-project-bootstrap",
     "license": "GPL-2.0",
     "authors": [
         {
-            "name": "eZ Publish dev-team & eZ Community",
-            "homepage": "https://github.com/ezsystems/ezpublish-community/contributors"
+            "name": "Marc Sallaberremborde",
+            "homepage": "https://www.infostrates.fr"
         }
     ],
     "autoload": {
