@@ -1,11 +1,12 @@
 #Infostrates' eZ5 Project Bootstrap
 
 A simple start structure for a new eZPublish Community Project.
+
 Take care that this project might not fit your needs, as its scaled for our own server settings (especially the "reset-files-owner" script part of the composer.json).
 
 ##Installation 
 ```
-php -d memory_limit composer.phar create-project mclone/ez5-project-bootstrap [nom_du_projet]
+php -d memory_limit=-1 composer.phar create-project mclone/ez5-project-bootstrap [nom_du_projet]
 ```
 
 C'est prêt !
