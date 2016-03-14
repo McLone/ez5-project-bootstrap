@@ -4,9 +4,9 @@
 /.idea/
 /bin/behat
 /bin/phpunit
-/ezpublish/cache/
+/ezpublish/cache
 !/ezpublish/cache/.keep
-/ezpublish/logs/
+/ezpublish/logs
 !/ezpublish/logs/.keep
 /ezpublish_legacy/autoload/
 /ezpublish_legacy/var/autoload/
