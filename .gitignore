@@ -24,8 +24,6 @@
 /ezpublish_legacy/bin/win32
 *.DS_Store
 /ezpublish/config/parameters.yml
-/ezpublish/config/ezpublish_prod.yml
-/ezpublish/config/ezpublish_dev.yml
 /ezpublish/sessions
 /ezpublish/bootstrap.php.cache
 /web/index_treemenu.php
@@ -69,7 +67,8 @@ composer.phar
 /ezpublish_legacy/kernel
 /ezpublish_legacy/lib
 /ezpublish_legacy/schemas
-/ezpublish_legacy/settings
+/ezpublish_legacy/settings/*.ini
+/ezpublish_legacy/settings/override/*.ini
 /ezpublish_legacy/share
 /ezpublish_legacy/support
 /ezpublish_legacy/update
