@@ -1,8 +1,23 @@
 #Infostrates eZ5 Project Bootstrap
 
-Veuillez modifier le titre **au dessus**, et indiquer ici toutes les **informations utiles** à une reprise en main du projet.
+##Installation 
+```bash
+php -d memory_limit composer.phar install
+sudo -u apache php ezpublish/console ezpublish:legacy:script bin/php/ezpgenerateautoloads.php
+sudo -u apache php ezpublish/console ezpublish:test:init_db
+chown web:web -R ./*
+chown apache:apache -R ezpublish/cache ezpublish/logs ezpublish_legacy/var
+```
+
+L'admin est ici :
+web/is_admin
+Login admin (**à changer avant d'oublier**) :
+admin
+publish
 
 N'hésitez pas à utiliser le dossier doc ;)
+
+Veuillez modifier le contenu **au dessus de cette ligne (comprise)**, et indiquer ici toutes les **informations utiles** à une reprise en main du projet.
 
 # Using eZ Publish 5
 
