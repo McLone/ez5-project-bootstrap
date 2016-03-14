@@ -54,7 +54,7 @@ ezpublish:
     imagemagick:
         enabled: true
         # Absolute path to ImageMagick "convert" binary
-        path: /opt/local/bin/convert
+        path: /usr/bin/convert
 
     # System settings, grouped by siteaccess and/or siteaccess group
     system:
