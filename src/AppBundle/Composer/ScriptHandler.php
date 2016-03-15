@@ -5,6 +5,7 @@ namespace AppBundle\Composer;
 
 use Composer\Script\CommandEvent;
 use Sensio\Bundle\DistributionBundle\Composer\ScriptHandler as DistributionBundleScriptHandler;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Yaml\Parser;
 
 class ScriptHandler extends DistributionBundleScriptHandler
@@ -39,5 +40,13 @@ class ScriptHandler extends DistributionBundleScriptHandler
 
             static::executeCommand($event, $appDir, 'ezpublish:test:init_db ' . $envParameter);
         }
+    }
+
+    public static function prepareHtaccess(CommandEvent $event) {
+        $options = self::getOptions( $event );
+        $webDir = $options['symfony-web-dir'];
+
+        $fs = new Filesystem();
+        $fs->copy($webDir.'/.htaccess.dist', $webDir.'/.htaccess');
     }
 }

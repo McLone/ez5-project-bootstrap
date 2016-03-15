@@ -6,61 +6,61 @@ RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 # Needed for ci testing, remove in prod.
-RewriteCond %{REQUEST_URI} ^/php5-fcgi(.*)
+RewriteCond %{REQUEST_URI} ^php5-fcgi(.*)
 RewriteRule . - [L]
 
 # v1 rest API is on Legacy
-RewriteRule ^/api/[^/]+/v1/ /index_rest.php [L]
+RewriteRule ^api/[^/]+/v1/ /index_rest.php [L]
 
 # If using cluster, uncomment the following two lines:
 ## For 5.4 and higher:
-#RewriteRule ^/var/([^/]+/)?storage/images(-versioned)?/.* /index.php [L]
-#RewriteRule ^/var/([^/]+/)?cache/(texttoimage|public)/.* /index_cluster.php [L]
+#RewriteRule ^var/([^/]+/)?storage/images(-versioned)?/.* /index.php [L]
+#RewriteRule ^var/([^/]+/)?cache/(texttoimage|public)/.* /index_cluster.php [L]
 ## Versions prior to 5.4:
-#RewriteRule ^/var/([^/]+/)?storage/images(-versioned)?/.* /index_cluster.php [L]
-#RewriteRule ^/var/([^/]+/)?cache/(texttoimage|public)/.* /index_cluster.php [L]
+#RewriteRule ^var/([^/]+/)?storage/images(-versioned)?/.* /index_cluster.php [L]
+#RewriteRule ^var/([^/]+/)?cache/(texttoimage|public)/.* /index_cluster.php [L]
 
-RewriteRule ^/var/([^/]+/)?storage/images(-versioned)?/.* - [L]
-RewriteRule ^/var/([^/]+/)?cache/(texttoimage|public)/.* - [L]
-RewriteRule ^/design/[^/]+/(stylesheets|images|javascript|fonts)/.* - [L]
-RewriteRule ^/share/icons/.* - [L]
-RewriteRule ^/extension/[^/]+/design/[^/]+/(stylesheets|flash|images|lib|javascripts?)/.* - [L]
-RewriteRule ^/packages/styles/.+/(stylesheets|images|javascript)/[^/]+/.* - [L]
-RewriteRule ^/packages/styles/.+/thumbnail/.* - [L]
-RewriteRule ^/var/storage/packages/.* - [L]
+RewriteRule ^var/([^/]+/)?storage/images(-versioned)?/.* - [L]
+RewriteRule ^var/([^/]+/)?cache/(texttoimage|public)/.* - [L]
+RewriteRule ^design/[^/]+/(stylesheets|images|javascript|fonts)/.* - [L]
+RewriteRule ^share/icons/.* - [L]
+RewriteRule ^extension/[^/]+/design/[^/]+/(stylesheets|flash|images|lib|javascripts?)/.* - [L]
+RewriteRule ^packages/styles/.+/(stylesheets|images|javascript)/[^/]+/.* - [L]
+RewriteRule ^packages/styles/.+/thumbnail/.* - [L]
+RewriteRule ^var/storage/packages/.* - [L]
 
 # Makes it possible to place your favicon at the root of your
 # eZ Publish instance. It will then be served directly.
-RewriteRule ^/favicon\.ico - [L]
+RewriteRule ^favicon\.ico - [L]
 
 # Uncomment the line below if you want your favicon be served
 # from the standard design. You can customize the path to
 # favicon.ico by changing /design/standard/images/favicon\.ico
-#RewriteRule ^/favicon\.ico /design/standard/images/favicon.ico [L]
-RewriteRule ^/design/standard/images/favicon\.ico - [L]
+#RewriteRule ^favicon\.ico /design/standard/images/favicon.ico [L]
+RewriteRule ^design/standard/images/favicon\.ico - [L]
 
 # Give direct access to robots.txt for use by crawlers (Google,
 # Bing, Spammers..)
-RewriteRule ^/robots\.txt - [L]
+RewriteRule ^robots\.txt - [L]
 
 # Platform for Privacy Preferences Project ( P3P ) related files
 # for Internet Explorer
 # More info here : http://en.wikipedia.org/wiki/P3p
-RewriteRule ^/w3c/p3p\.xml - [L]
+RewriteRule ^w3c/p3p\.xml - [L]
 
 # Uncomment the following lines when using popup style debug in legacy
-#RewriteRule ^/var/([^/]+/)?cache/debug\.html.* - [L]
+#RewriteRule ^var/([^/]+/)?cache/debug\.html.* - [L]
 
 # Following rule is needed to correctly display assets from eZ Publish5 / Symfony bundles
-RewriteRule ^/bundles/ - [L]
+RewriteRule ^bundles/ - [L]
 
 # Additional Assetic rules for prod env, remember to run php ezpublish/console assetic:dump --env=prod
 RewriteCond %{ENV:ENVIRONMENT} "prod"
-RewriteRule ^/(css|js)/.*\.(css|js) - [L]
+RewriteRule ^(css|js)/.*\.(css|js) - [L]
 
 #Assetic
 RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule ^/(css|js)/.*\.(css|js) - [L]
+RewriteRule ^(css|js)/.*\.(css|js) - [L]
 
 # Conditions for enabling webdav and soap interfaces from legacy
 ## Symlink files into your web folder and correct domain names to be valid server aliases
@@ -73,4 +73,4 @@ RewriteRule ^/(css|js)/.*\.(css|js) - [L]
 #RewriteCond %{ENV:ENVIRONMENT} "dev"
 #RewriteRule .* /index_dev.php [L]
 
-RewriteRule .* /index.php
+RewriteRule .* index.php
