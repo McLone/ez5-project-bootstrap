@@ -72,12 +72,12 @@
             "@reset-files-owner"
         ],
         "post-create-project-cmd": [
+          "AppBundle\\Composer\\ScriptHandler::prepareHtaccess",
           "AppBundle\\Composer\\ScriptHandler::initDb",
           "AppBundle\\Composer\\ScriptHandler::generateLegacyAutoload",
           "@reset-files-owner"
         ],
         "reset-files-owner": [
-          "AppBundle\\Composer\\ScriptHandler::prepareHtaccess",
           "chown web:web -R ./*",
           "chown apache:apache -R ezpublish/cache ezpublish/logs ezpublish_legacy/var"
         ]
