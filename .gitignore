@@ -68,7 +68,7 @@ composer.phar
 /ezpublish_legacy/lib
 /ezpublish_legacy/schemas
 /ezpublish_legacy/settings/*.ini
-/ezpublish_legacy/settings/override/*.ini
+/ezpublish_legacy/settings/override
 /ezpublish_legacy/share
 /ezpublish_legacy/support
 /ezpublish_legacy/update
