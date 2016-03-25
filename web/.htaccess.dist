@@ -1,5 +1,3 @@
-SetEnvIf %{ENV:SYMFONY_ENVIRONMENT} "dev" ENVIRONMENT=dev
-
 RewriteEngine On
 
 # Uncomment in FastCGI mode or when using PHP-FPM, to get basic auth working.
