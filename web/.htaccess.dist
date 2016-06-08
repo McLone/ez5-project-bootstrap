@@ -1,3 +1,6 @@
+#A supprimer à la fin de la phase de dev:
+SetEnv ENVIRONMENT "dev"
+
 RewriteEngine On
 
 # Uncomment in FastCGI mode or when using PHP-FPM, to get basic auth working.
