@@ -56,9 +56,12 @@ RewriteRule ^bundles/ - [L]
 RewriteCond %{ENV:ENVIRONMENT} "prod"
 RewriteRule ^(css|js)/.*\.(css|js) - [L]
 
-#Assetic
+#Assetic dev settings
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^(css|js)/.*\.(css|js) - [L]
+
+RewriteRule ^assets/images/.* - [L]
+RewriteRule ^assets/fonts/.* - [L]
 
 # Conditions for enabling webdav and soap interfaces from legacy
 ## Symlink files into your web folder and correct domain names to be valid server aliases
