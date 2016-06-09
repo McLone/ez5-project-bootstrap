@@ -1,0 +1,9 @@
+system:
+    frontend_group:
+        location_view:
+            full:
+                frontpage:
+                    controller: AppBundle:Frontpage:page
+                    template: AppBundle:eZ/location/full:frontpage.html.twig
+                    match:
+                        Identifier\ContentType: [frontpage]

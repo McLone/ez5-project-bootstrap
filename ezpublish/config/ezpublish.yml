@@ -23,7 +23,12 @@ stash:
             # you need to change the keyHashFunction used to generate cache directories to "crc32"
             # FileSystem
             #    keyHashFunction: crc32
-
+ez_publish_legacy:
+    system:
+        frontend_group:
+            templating:
+                module_layout: AppBundle::pagelayout_legacy.html.twig
+                view_layout: AppBundle::pagelayout.html.twig
 ezpublish:
     # Define all your repositories here
     # If you use multi-site with multiple databases, you shall define multiple repositories
@@ -73,14 +78,7 @@ ezpublish:
                 ttl_cache: true
                 # TTL cache (http) in seconds
                 # Note that Http cache for a given content is always invalidated when publishing that content
-                default_ttl: 300
-            location_view:
-                full:
-                    smallFolder:
-                        template: eZDemoBundle:full:small_folder.html.twig
-                        match:
-                            Identifier\ContentType: small_folder
-                            Identifier\ParentContentType: [landing_page, frontpage]
+                default_ttl: 3600
             # Define here your image variations (formerly known as "image aliases")
             image_variations:
                 my_image_variation:

@@ -1,0 +1,10 @@
+parameters:
+
+services:
+    site_twig_extension:
+        class: AppBundle\Twig\Extension\SiteExtension
+        public: false
+        tags:
+            - { name: twig.extension }
+        calls:
+            - [setRequest, ["@?request="]]
