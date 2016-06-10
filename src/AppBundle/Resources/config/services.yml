@@ -11,3 +11,20 @@ services:
     frontpage.repository:
         class: AppBundle\EzRepository\Frontpage
         arguments: ['@ezpublish.api.repository', '@ezpublish_legacy.config.resolver']
+    fallback.router:
+        class: AppBundle\Routing\FallbackRouter
+        arguments: ["@ezpublish_legacy.url_generator", "@?request_context", @?logger]
+        tags:
+            - {name: router, priority: -254}
+        lazy: true
+    fallback.controller:
+        class: AppBundle\Controller\LegacyKernelController
+        arguments:
+            - "@ezpublish_legacy.kernel"
+            - "@ezpublish.config.resolver"
+            - "@ezpublish_legacy.uri_helper"
+            - "@ezpublish_legacy.response_manager"
+            - "@ezpublish_legacy.templating.legacy_helper"
+            - "@router"
+        calls:
+            - [setRequest, ["@?request="]]
