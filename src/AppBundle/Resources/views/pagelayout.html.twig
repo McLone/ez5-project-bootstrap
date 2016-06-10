@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <title>{# TODO #}</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        {% stylesheets filter="cssrewrite" output="css/pagelayout_oropolis.css"
+        {% stylesheets filter="cssrewrite, scssphp" output="css/pagelayout_oropolis.css"
             "assets/css/bootstrap.min.css"
+            "assets/scss/pagelayout.scss"
         %}
         <link rel="stylesheet" href="{{ fix_assetic_path(asset_url) }}" />
         {% endstylesheets %}
