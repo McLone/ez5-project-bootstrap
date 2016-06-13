@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0b3ef25d1421c2e1887ab955b142e258",
-    "content-hash": "0f5caf059115c1fcd5f8228360a9f6be",
+    "hash": "ec69b3da4f90fe2d44ebb291ef6ed82a",
+    "content-hash": "b580ad5c76db232d30dc9ffe63d8dc54",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1392,16 +1392,16 @@
         },
         {
             "name": "ezsystems/ezpublish-legacy-installer",
-            "version": "v2.0.1",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezpublish-legacy-installer.git",
-                "reference": "127643119288c6a47b8ef8bf7018c8a01cfdc788"
+                "reference": "7fc69c891bed1794c002d532dc910f2b5bc1f970"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezpublish-legacy-installer/zipball/127643119288c6a47b8ef8bf7018c8a01cfdc788",
-                "reference": "127643119288c6a47b8ef8bf7018c8a01cfdc788",
+                "url": "https://api.github.com/repos/ezsystems/ezpublish-legacy-installer/zipball/7fc69c891bed1794c002d532dc910f2b5bc1f970",
+                "reference": "7fc69c891bed1794c002d532dc910f2b5bc1f970",
                 "shasum": ""
             },
             "require": {
@@ -1431,7 +1431,7 @@
                 }
             ],
             "description": "Installer for eZ Publish legacy extensions and legacy kernel itself.",
-            "time": "2015-06-15 13:57:14"
+            "time": "2016-03-31 02:18:05"
         },
         {
             "name": "ezsystems/ezstarrating-ls-extension",

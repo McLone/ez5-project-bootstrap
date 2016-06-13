@@ -23,6 +23,7 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "tedivm/stash-bundle": "0.4.*",
+        "ezsystems/ezpublish-legacy-installer": "2.0.*",
         "ezsystems/ezpublish-kernel": ">=2014.11",
         "ezsystems/ezpublish-legacy": ">=2014.11",
         "ezsystems/demobundle": ">=2014.11",
