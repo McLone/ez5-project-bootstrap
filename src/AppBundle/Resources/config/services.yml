@@ -10,7 +10,7 @@ services:
             - [setRequest, ["@?request="]]
     frontpage.repository:
         class: AppBundle\EzRepository\Frontpage
-        arguments: ['@ezpublish.api.repository', '@ezpublish_legacy.config.resolver']
+        arguments: ['@ezpublish.api.repository', '@ezpublish.config.resolver']
     fallback.router:
         class: AppBundle\Routing\FallbackRouter
         arguments: ["@ezpublish_legacy.url_generator", "@?request_context", @?logger]
