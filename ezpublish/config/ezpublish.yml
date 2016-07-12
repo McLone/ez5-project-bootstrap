@@ -1,5 +1,7 @@
 # Doctrine DBAL configuration
 doctrine:
+    orm:
+        auto_mapping: true
     dbal:
         connections:
             default:
