@@ -2,6 +2,7 @@
 
 [ExtensionSettings]
 ActiveExtensions[]
+ActiveExtensions[]=islegacyapp
 ActiveExtensions[]=ezjscore
 ActiveExtensions[]=ezoe
 ActiveExtensions[]=ezformtoken
