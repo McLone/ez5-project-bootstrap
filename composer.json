@@ -74,6 +74,7 @@
         ],
         "post-create-project-cmd": [
           "AppBundle\\Composer\\ScriptHandler::prepareHtaccess",
+          "cp -r ezpublish_legacy/settings/override.dist ezpublish_legacy/settings/override",
           "AppBundle\\Composer\\ScriptHandler::initDb",
           "AppBundle\\Composer\\ScriptHandler::generateLegacyAutoload"
         ]
