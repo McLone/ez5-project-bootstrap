@@ -60,8 +60,7 @@
             "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installAssets",
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::dumpAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installLegacyBundlesExtensions",
-            "@reset-files-owner"
+            "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installLegacyBundlesExtensions"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -71,18 +70,12 @@
             "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installAssets",
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::dumpAssetsHelpText",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installLegacyBundlesExtensions",
-            "@reset-files-owner"
+            "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installLegacyBundlesExtensions"
         ],
         "post-create-project-cmd": [
           "AppBundle\\Composer\\ScriptHandler::prepareHtaccess",
           "AppBundle\\Composer\\ScriptHandler::initDb",
-          "AppBundle\\Composer\\ScriptHandler::generateLegacyAutoload",
-          "@reset-files-owner"
-        ],
-        "reset-files-owner": [
-          "chown web:web -R ./*",
-          "chown apache:apache -R ezpublish/cache ezpublish/logs ezpublish_legacy/var"
+          "AppBundle\\Composer\\ScriptHandler::generateLegacyAutoload"
         ]
     },
     "config": {
