@@ -11,7 +11,7 @@ namespace AppBundle\EzRepository;
 
 use AppBundle\EzRepository\Exception\ContentNotFoundException;
 use AppBundle\EzRepository\Exception\LocationNotFoundException;
-use eZ\Publish\API\Repository\Repository as EzOriginalRepository;
+use eZ\Publish\Core\Repository\Repository as EzOriginalRepository;
 use eZ\Publish\API\Repository\Values\Content\Content;
 use eZ\Publish\API\Repository\Values\Content\Location;
 use eZ\Publish\API\Repository\Values\Content\LocationQuery;
@@ -32,7 +32,7 @@ abstract class Repository
      * @param EzOriginalRepository $repository
      * @param ConfigResolverInterface $configResolver
      */
-    public function __construct(EzOriginalRepository $repository, ConfigResolverInterface $configResolver)
+    public function __construct($repository, ConfigResolverInterface $configResolver)
     {
         $this->repository = $repository;
         $this->configResolver = $configResolver;
